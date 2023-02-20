@@ -2,12 +2,14 @@ import argparse
 import text
 from utils import load_filepaths_and_text
 
+# python preprocess.py --text_index 1 --filelists filelists\list.txt filelists\list_val.txt
+
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
   parser.add_argument("--out_extension", default="cleaned")
   parser.add_argument("--text_index", default=1, type=int)
   parser.add_argument("--filelists", nargs="+", default=["filelists/ljs_audio_text_val_filelist.txt", "filelists/ljs_audio_text_test_filelist.txt"])
-  parser.add_argument("--text_cleaners", nargs="+", default=["english_cleaners2"])
+  parser.add_argument("--text_cleaners", nargs="+", default=["japanese_cleaners"])
 
   args = parser.parse_args()
     
